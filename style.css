@@ -16,22 +16,16 @@ body {
 .world {
   overflow: hidden;
   position: relative;
-  width: 100%;
-  height: 300px;
 }
 
 .score {
-  height: 30px;
-  font-size: 50px;
+  font-size: 3vmin;
   float: right;
 }
 
 .startgame {
-  position: absolute;
   text-align: center;
-  font-size: 50px;
-  top: 0%;
-  left: 42%;
+  font-size: 3vmin;
 }
 
 .hide {
@@ -43,7 +37,6 @@ body {
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: -1;
   left: calc(var(--left) * 1%);
 }
 
@@ -51,13 +44,13 @@ body {
   --bottom: 0;
   position: absolute;
   left: 1%;
-  height: 40%;
+  height: 20%;
   bottom: calc(var(--bottom) * 1%);
 }
 
 .chicken {
   position: absolute;
-  left: calc(var(--bottom) * 1%);
-  height: 40%;
+  left: calc(var(--left) * 1%);
+  height: 20%;
   bottom: 0;
 }
