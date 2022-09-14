@@ -6,7 +6,7 @@ import {
 
 const cornElem = document.querySelector('[data-corn]');
 
-const jumpSpeed = 0.35;
+const jumpSpeed = 0.38;
 const gravity = 0.001;
 const cornFrameCount = 4;
 const frameTime = 120;

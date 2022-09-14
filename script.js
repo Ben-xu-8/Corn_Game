@@ -4,15 +4,27 @@ import { setChicken, updateChicken, getChickenRect } from './chicken.js';
 
 const width = 100;
 const height = 30;
-const speed_increase = 0.00001;
+const speed_increase = 0.00002;
 
 const worldElem = document.querySelector('[data-world]');
 const scoreElem = document.querySelector('[data-score]');
 const startElem = document.querySelector('[data-startgame]');
 
+let play = document.getElementById('play');
+let pause = document.getElementById('pause');
+let mute = document.getElementById('mute');
+
 setPixelScaleWorld();
 window.addEventListener('resize', setPixelScaleWorld);
 document.addEventListener('keydown', handleStart, { once: true });
+var audio = new Audio('/img/itscorn.mp3');
+
+play.addEventListener('click', function () {
+  audio.play();
+});
+pause.addEventListener('click', function () {
+  audio.pause();
+});
 
 let lastTime;
 let scale;
@@ -50,16 +62,15 @@ function updateScore(delta) {
   scoreElem.textContent = Math.floor(score);
 }
 
-function setSong() {
-  var audio = new Audio('/img/itscorn.mp3');
-  audio.play();
-}
+// function setSong() {
+//   audio.play();
+// }
 
 function handleStart() {
   lastTime = null;
   scale = 1;
   score = 0;
-  setSong();
+  //   setSong();
   setGround();
   setCorn();
   setChicken();

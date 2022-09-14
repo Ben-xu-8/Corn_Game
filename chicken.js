@@ -4,9 +4,9 @@ import {
   setCustomProperty,
 } from './updateProperty.js';
 
-const speed = 0.015;
-const CHICKEN_INTERVAL_MIN = 600;
-const CHICKEN_INTERVAL_MAX = 3000;
+const speed = 0.02;
+const CHICKEN_INTERVAL_MIN = 1000;
+const CHICKEN_INTERVAL_MAX = 4000;
 const worldElem = document.querySelector('[data-world]');
 
 let nextChickenTime;
