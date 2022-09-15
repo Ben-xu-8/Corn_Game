@@ -18,6 +18,8 @@ setPixelScaleWorld();
 window.addEventListener('resize', setPixelScaleWorld);
 document.addEventListener('keydown', handleStart, { once: true });
 var audio = new Audio('/img/itscorn.mp3');
+audio.loop = true;
+audio.play();
 
 play.addEventListener('click', function () {
   audio.play();
