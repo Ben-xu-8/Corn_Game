@@ -59,3 +59,8 @@ body {
 .sound {
   margin-right: 10px;
 }
+
+.scoreheader {
+  display: flex;
+  justify-content: space-between;
+}
